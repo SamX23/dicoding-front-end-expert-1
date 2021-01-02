@@ -1,4 +1,4 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .hero {
     padding: 20px;
   }
@@ -15,6 +15,16 @@
   }
   .post-item__description {
     font-size: 18px;
+  }
+
+  #drawer {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color: #111;
   }
 }
 
