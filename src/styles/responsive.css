@@ -60,6 +60,8 @@
   .headline {
     grid-template-columns: 1fr;
   }
+}
+@media screen and (min-width: 800px) {
   .posts {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
