@@ -15,6 +15,7 @@
     <header class="header">
       <div class="header__inner">
         <h1 class="header__title">Dicoding's Blog</h1>
+        <a id="hamburger" href="#">☰</a>
       </div>
     </header>
     <nav id="drawer" class="nav">
@@ -25,7 +26,6 @@
         <li class="nav__item"><a href="#">Stories</a></li>
       </ul>
     </nav>
-    <a id="hamburger" href="#">☰</a>
     <div class="hero">
       <div class="hero__inner">
         <h1 class="hero__title">
@@ -243,5 +243,22 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </footer>
+    <script>
+      const hamburgerButtonElement = document.querySelector("#hamburger");
+      const drawerElement = document.querySelector("#drawer");
+      const mainElement = document.querySelector("main");
+
+      hamburgerButtonElement.addEventListener("click", (event) => {
+        drawerElement.classList.toggle("open");
+        event.stopPropagation();
+        console.log("opened");
+      });
+
+      mainElement.addEventListener("click", (event) => {
+        drawerElement.classList.remove("open");
+        console.log("clicked");
+        event.stopPropagation();
+      });
+    </script>
   </body>
 </html>
